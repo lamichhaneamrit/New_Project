@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link href="https://fonts.googleapis.com/css?family=Cinzel" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="login.js"></script>
+
+    <link rel="stylesheet" href="login.css" />
+</head>
+
+
+
+<body>
+    <main class="painting-container">
+        <h2> You Must login to Get full access</h2>
+        <div class="content-container">
+            <h1 class="blue-shadow">Login</h1>
+            <form id="login-form">
+                <input class="text-input normal-black" id="username" type="text" name="username">
+                <label class="text-input-label normal-black" for="username">User Name</label>
+                <input class="text-input normal-black force-redraw" id="password" type="password" name="password">
+                <label class="text-input-label normal-black" for="password">Password</label>
+                <div style="clear: both;"></div>
+                <ul class="checkbox-list">
+                    <li>
+                        <input type="checkbox" id="show-ps" onchange="document.getElementById('password').type = this.checked ? 'text' : 'password'" />
+                        <label class="checkbox-label" for="show-ps">Show Password</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="rememberme" />
+                        <label class="checkbox-label" for="rememberme">Remember Me</label>
+                    </li>
+                </ul>
+                <ul class="errors hide" id="error-message">
+                    <li>Please enter your User Name.Please enter your User Name.Please enter your User Name.</li>
+                    <li>Please enter your User Name.</li>
+                    <li>Please enter your User Name.</li>
+                </ul>
+                <div class="buttons">
+                    <button type="submit" id="login" class="blue-shadow">Submit</button>
+                    <span class="slash">/</span>
+                    <a href="register.html">
+                        <button type="button" id="register">Register</button>
+                    </a>
+
+                </div>
+            </form>
+        </div>
+    </main>
+
+
+</body>
+
+</html>

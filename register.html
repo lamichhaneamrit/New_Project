@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Welcome To Registration Form</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.css" />
+    <link rel="stylesheet" href="register.css" />
+    <script src="register.js"></script>
+</head>
+
+<body>
+    <!-- Main div code -->
+    <div id="main">
+        <div class="h-tag">
+            <h2>Create Your Account</h2>
+        </div>
+        <!-- create account div -->
+        <div class="login">
+            <table cellspacing="2" align="center" cellpadding="8" border="0">
+                <tr>
+                    <td align="right">Enter Name :</td>
+                    <td><input type="text" placeholder="Enter user here" id="t1" class="tb" /></td>
+                </tr>
+                <tr>
+                    <td align="right">Enter Email ID :</td>
+                    <td><input type="text" placeholder="Enter Email ID here" id="t2" class="tb" /></td>
+                </tr>
+                <tr>
+                    <td align="right">Upload GewebeSchein :</td>
+                    <td><input type="file" placeholder="Upload file" id="t3" class="tb" onchange="return fileValidation" /></td>
+                </tr>
+                <tr>
+                    <td align="right">Enter Password :</td>
+                    <td><input type="password" placeholder="Enter Password here" id="t4" class="tb" /></td>
+                </tr>
+                <tr>
+                    <td align="right">Enter Confirm Password :</td>
+                    <td><input type="password" placeholder="Enter Password here" id="t5" class="tb" /></td>
+                </tr>
+                <tr>
+
+
+
+                    <script>
+                        function fileValidation() {
+                            var fileInput =
+                                document.getElementById('t3');
+
+                            var filePath = fileInput.value;
+
+                            // Allowing file type 
+                            var allowedExtensions =
+                                /(\.doc|\.docx|\.odt|\.pdf|\.tex|\.txt|\.rtf|\.wps|\.wks|\.wpd)$/i;
+
+                            if (!allowedExtensions.exec(filePath)) {
+                                alert('Invalid file type');
+                                fileInput.value = '';
+                                return false;
+                            }
+                        }
+                    </script>
+        </div>
+    </div>
+    </tr>
+    <tr>
+        <td></td>
+        <td>
+            <input type="reset" value="Clear Form" onclick="clearFunc()" id="res" class="btn" />
+            <input type="submit" value="Create Account" class="btn" onclick="registration()" /></td>
+    </tr>
+    </table>
+    </div>
+    <!-- create account box ending here.. -->
+    </div>
+    <!-- Main div ending here... -->
+</body>
+
+</html>
